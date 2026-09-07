@@ -7,7 +7,7 @@ import TrustSection from "@/components/TrustSection";
 import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Over Ons — Visie & Werkwijze van WB Advies & Finance",
+  title: "Over Ons | Visie & Werkwijze van WB Advies & Finance",
   description:
     "Leer WB Advies & Finance kennen: een modern boekhoudkantoor dat digitale efficiëntie combineert met persoonlijke aandacht. Ontdek onze missie, visie en waarden.",
   alternates: { canonical: "/over-ons" },
@@ -60,7 +60,7 @@ export default function OverOnsPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
                 WB Advies &amp; Finance is opgericht met één overtuiging:
-                ondernemers verdienen een financiële partner die meedenkt — niet
+                ondernemers verdienen een financiële partner die meedenkt, niet
                 alleen jaarlijks een map met cijfers achterlaat.
               </p>
             </Reveal>
@@ -84,8 +84,8 @@ export default function OverOnsPage() {
                   Onze visie
                 </h2>
                 <p className="mt-4 leading-relaxed text-wbDark-600">
-                  Wij geloven dat elke ondernemer — van startende zzp'er tot
-                  groeiende familieonderneming — recht heeft op realtime
+                  Wij geloven dat elke ondernemer, van startende zzp'er tot
+                  groeiende familieonderneming, recht heeft op realtime
                   financieel inzicht. De tijd dat boekhouden een jaarlijks
                   ritueel met papieren mappen was, is voorbij. Administratie
                   moet werken zoals moderne software: altijd actueel, overal
@@ -172,7 +172,7 @@ export default function OverOnsPage() {
               <blockquote className="relative">
                 <p className="font-display text-xl font-bold leading-relaxed sm:text-2xl">
                   “Wij zijn pas tevreden als u nooit meer omkijkt naar uw
-                  administratie — en wel naar uw cijfers. Dat verschil is waarom
+                  administratie, en wel naar uw cijfers. Dat verschil is waarom
                   WB Advies &amp; Finance bestaat.”
                 </p>
                 <figcaption className="mt-8 flex items-center gap-4">

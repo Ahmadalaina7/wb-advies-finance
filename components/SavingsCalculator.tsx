@@ -200,7 +200,7 @@ export default function SavingsCalculator() {
             </Link>
             <p className="mt-3 text-center text-[11px] leading-relaxed text-gray-500">
               Indicatieve berekening op basis van gemiddelde praktijkcijfers. Uw
-              situatie kan afwijken — vraag een gratis rapport op maat aan.
+              situatie kan afwijken. Vraag een gratis rapport op maat aan.
             </p>
           </div>
         </div>

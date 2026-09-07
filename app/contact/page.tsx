@@ -5,9 +5,9 @@ import Reveal from "@/components/Reveal";
 import { mapsHref, SITE, telHref, whatsappHref } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Plan een Gratis Kennismaking",
+  title: "Contact | Plan een Gratis Kennismaking",
   description:
-    "Neem contact op met WB Advies & Finance in Middelburg. Bel, mail of app via WhatsApp — u ontvangt binnen één werkdag antwoord van Walid Bobouh.",
+    "Neem contact op met WB Advies & Finance in Middelburg. Bel, mail of app via WhatsApp. U ontvangt binnen één werkdag antwoord van Walid Bobouh.",
   alternates: { canonical: "/contact" },
 };
 
@@ -15,7 +15,7 @@ const CONTACT_CARDS = [
   {
     icon: Phone,
     title: "Bel ons",
-    lines: [SITE.phoneDisplayIntl, "ma t/m vr, 09:00 – 17:30"],
+    lines: [SITE.phoneDisplayIntl, "ma t/m vr, 09:00 tot 17:30"],
     href: telHref(),
     linkLabel: SITE.phoneDisplay,
   },
@@ -70,7 +70,7 @@ export default function ContactPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
                 Vragen over uw administratie, een tweede mening of direct
-                overstappen? Stuur een bericht — u krijgt altijd een persoonlijk
+                overstappen? Stuur een bericht. U krijgt altijd een persoonlijk
                 antwoord, geen verkooppraatje.
               </p>
             </Reveal>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                   </div>
                   <dl className="mt-4 space-y-2 text-sm">
                     {[
-                      { day: "Maandag – Vrijdag", hours: "09:00 – 17:30" },
+                      { day: "Maandag tot vrijdag", hours: "09:00 tot 17:30" },
                       { day: "Zaterdag", hours: "Op afspraak" },
                       { day: "Zondag", hours: "Gesloten" },
                     ].map((row) => (
@@ -157,7 +157,7 @@ export default function ContactPage() {
                     />
                     <p className="text-sm leading-relaxed text-gray-300">
                       Liever direct antwoord? Bel of app via WhatsApp tijdens
-                      openingstijden — u krijgt persoonlijk contact, geen
+                      openingstijden. U krijgt persoonlijk contact, geen
                       keuzemenu.
                     </p>
                   </div>

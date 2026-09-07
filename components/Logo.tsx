@@ -38,7 +38,7 @@ export default function Logo({
     <Link
       href={href}
       className="inline-flex min-h-[44px] items-center"
-      aria-label={`${SITE.name} — naar de homepage`}
+      aria-label={`${SITE.name}, naar de homepage`}
     >
       <Image
         src={src}

@@ -10,7 +10,7 @@ type CtaBandProps = {
 
 export default function CtaBand({
   title = "Klaar voor een zorgeloze administratie?",
-  description = "Plan een gratis kennismaking van 30 minuten. U ontvangt direct inzicht in wat u kunt besparen — vrijblijvend en zonder kleine lettertjes.",
+  description = "Plan een gratis kennismaking van 30 minuten. U ontvangt direct inzicht in wat u kunt besparen, vrijblijvend en zonder kleine lettertjes.",
 }: CtaBandProps) {
   return (
     <section className="section" aria-labelledby="cta-heading">

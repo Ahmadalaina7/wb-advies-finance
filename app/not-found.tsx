@@ -15,7 +15,7 @@ export default function NotFound() {
           Pagina niet gevonden
         </h1>
         <p className="mx-auto mt-3 max-w-md text-wbDark-500">
-          De pagina die u zoekt bestaat niet of is verplaatst. Geen zorgen — uw
+          De pagina die u zoekt bestaat niet of is verplaatst. Geen zorgen: uw
           cijfers kloppen nog gewoon.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">

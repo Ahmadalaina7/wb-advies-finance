@@ -4,11 +4,11 @@ export const SITE = {
   owner: "Walid Bobouh",
   url: "https://wbadvies-finance.webnestiq.nl",
   email: "info@wbadviesfinance.nl",
-  /** E.164 without spaces — for tel: and wa.me links */
+  /** E.164 without spaces, for tel: and wa.me links */
   phone: "+31620984255",
   phoneDisplay: "06 209 842 55",
   phoneDisplayIntl: "+31 (0) 6 209 84255",
-  /** Digits only, country code included — for WhatsApp */
+  /** Digits only, country code included, for WhatsApp */
   whatsapp: "31620984255",
   address: {
     street: "Poproute 99",

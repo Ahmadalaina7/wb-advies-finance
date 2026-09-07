@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 import { FAQ_ITEMS, SERVICES, VALUE_PROPS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Diensten — Boekhouding, Belastingen, Salaris & Advies",
+  title: "Diensten | Boekhouding, Belastingen, Salaris & Advies",
   description:
     "Ontdek de diensten van WB Advies & Finance: geautomatiseerde boekhouding, belastingaangifte, salarisadministratie, financieel advies en startersbegeleiding. Vaste prijzen, persoonlijke aandacht.",
   alternates: { canonical: "/diensten" },
@@ -42,7 +42,7 @@ export default function DienstenPage() {
               </h1>
               <p className="mt-6 max-w-2xl text-base leading-relaxed text-gray-300 sm:text-lg">
                 Van geautomatiseerde boekhouding tot strategisch financieel
-                advies. U kiest de diensten die u nodig heeft — wij zorgen dat
+                advies. U kiest de diensten die u nodig heeft. Wij zorgen dat
                 alles naadloos samenwerkt.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">

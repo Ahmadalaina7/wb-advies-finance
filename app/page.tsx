@@ -33,7 +33,7 @@ const PROCESS_STEPS = [
   {
     icon: ClipboardList,
     title: "Voorstel op maat",
-    text: "Binnen 3 werkdagen ontvangt u een vaste prijs per maand — helder en zonder verrassingen.",
+    text: "Binnen 3 werkdagen ontvangt u een vaste prijs per maand, helder en zonder verrassingen.",
   },
   {
     icon: Link2,
@@ -278,7 +278,7 @@ export default function HomePage() {
                 </h2>
                 <p className="mt-4 text-wbDark-500 sm:text-lg">
                   Staat uw vraag er niet tussen? Bel ons of plan een gratis
-                  kennismaking — we helpen u graag verder.
+                  kennismaking. We helpen u graag verder.
                 </p>
                 <Link href="/contact" className="btn-secondary mt-6">
                   Stel uw vraag

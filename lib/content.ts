@@ -38,7 +38,7 @@ export const SERVICES: Service[] = [
   {
     slug: "belastingaangifte",
     title: "Belastingaangifte",
-    short: "Omzetbelasting, inkomstenbelasting en vennootschapsbelasting — altijd op tijd.",
+    short: "Omzetbelasting, inkomstenbelasting en vennootschapsbelasting, altijd op tijd.",
     icon: Receipt,
     intro:
       "Fiscaliteit is meer dan formulieren invullen. Wij controleren actief op aangiften die u misschien ontgaan zijn, passen beschikkingen toe en zorgen dat u nooit te veel belasting betaalt. U krijgt een vast ritme: geen verrassingen, geen boetes, wel rust.",
@@ -52,7 +52,7 @@ export const SERVICES: Service[] = [
   {
     slug: "salarisadministratie",
     title: "Salarisadministratie",
-    short: "Correcte, tijdige loonstroken voor u en uw team — inclusief alle regels.",
+    short: "Correcte, tijdige loonstroken voor u en uw team, inclusief alle regels.",
     icon: Users,
     intro:
       "Van één directeur-grootaandeelhouder tot een compleet team: wij verzorgen de volledige salarisadministratie. Loonheffingen, pensioenpremies, invordering en jaaropgaven worden volautomatisch verwerkt en persoonlijk gecontroleerd door onze specialisten.",
@@ -69,7 +69,7 @@ export const SERVICES: Service[] = [
     short: "Van cijfers naar beslissingen: sturen op toekomst en winst.",
     icon: LineChart,
     intro:
-      "Wij vertalen uw cijfers naar heldere adviezen. Met liquiditeitsprognoses, scenario-analyses en businesscases weet u precies welke stap u kunt nemen — of dat nu investeren, inhuren of uitbreiden is. Wij zijn de sparringpartner naast de ondernemer.",
+      "Wij vertalen uw cijfers naar heldere adviezen. Met liquiditeitsprognoses, scenario-analyses en businesscases weet u precies welke stap u kunt nemen, of dat nu investeren, inhuren of uitbreiden is. Wij zijn de sparringpartner naast de ondernemer.",
     bullets: [
       "Liquiditeitsbegroting en meerjarige prognoses",
       "Scenario-analyses en businesscases",
@@ -122,7 +122,7 @@ export const TRUST_ITEMS: TrustItem[] = [
     icon: LineChart,
     title: "Proactief",
     description:
-      "Wij wachten niet op uw vraag. Signalen over besparingen, aftrekposten en risico's komen van ons — vóór het fiscale jaar sluit.",
+      "Wij wachten niet op uw vraag. Signalen over besparingen, aftrekposten en risico's komen van ons, vóór het fiscale jaar sluit.",
     stat: "€1.500",
     statLabel: "gemiddelde besparing p/j",
   },
@@ -165,7 +165,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Wat kost uitbesteding van mijn boekhouding?",
     answer:
-      "Onze pakketten starten bij €95 per maand voor zzp'ers. De prijs hangt af van het aantal transacties, loonstroken en gewenste advies. Na een korte kennismaking ontvangt u een vaste prijs per maand — zonder verrassingen achteraf.",
+      "Onze pakketten starten bij €95 per maand voor zzp'ers. De prijs hangt af van het aantal transacties, loonstroken en gewenste advies. Na een korte kennismaking ontvangt u een vaste prijs per maand, zonder verrassingen achteraf.",
   },
   {
     question: "Kan ik overstappen van mijn huidige accountant?",
@@ -180,7 +180,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Werk ik met een vast aanspreekpunt?",
     answer:
-      "Altijd. U krijgt één vaste specialist die uw dossier kent. Bij vakantie of ziekte neemt een collega die volledig is bijgebleven het over — u merkt daar niets van.",
+      "Altijd. U krijgt één vaste specialist die uw dossier kent. Bij vakantie of ziekte neemt een collega die volledig is bijgebleven het over. U merkt daar niets van.",
   },
   {
     question: "Neem je ook de aangifte omzetbelasting voor zzp'ers op?",
