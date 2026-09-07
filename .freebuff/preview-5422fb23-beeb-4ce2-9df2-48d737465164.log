@@ -1,0 +1,26 @@
+
+> wb-advies-finance@1.0.0 dev
+> next dev -p 3210
+
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3210
+
+ ✓ Starting...
+ ✓ Ready in 1949ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1878ms (1384 modules)
+ GET / 200 in 2533ms
+ GET / 200 in 111ms
+ GET / 200 in 60ms
+ GET / 200 in 87ms
+ GET / 200 in 98ms
+ GET / 200 in 74ms
+ ○ Compiling /diensten ...
+ ✓ Compiled /diensten in 1503ms (1403 modules)
+ ✓ Compiled in 386ms (661 modules)
+ GET /diensten 200 in 1921ms
+ GET / 200 in 188ms
+ GET / 200 in 140ms
+ ✓ Compiled in 629ms (1403 modules)
+ GET / 200 in 726ms
+[?25h
