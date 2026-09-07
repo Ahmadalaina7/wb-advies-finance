@@ -1,7 +1,7 @@
 export const SITE = {
   name: "WB Advies & Finance",
   legalName: "WB Advies & Finance B.V.",
-  url: "https://www.wbadviesfinance.nl",
+  url: "https://wbadvies-finance.webnestiq.nl",
   email: "info@wbadviesfinance.nl",
   phone: "+31 6 12345678",
   phoneDisplay: "06 - 12 34 56 78",

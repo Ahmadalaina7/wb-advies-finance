@@ -8,7 +8,7 @@
 
 # next.js
 /.next/
-/out/
+# Keep /out committed so Plesk can serve the static site without Node.js
 
 # production
 /build
