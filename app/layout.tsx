@@ -3,7 +3,6 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -144,7 +143,6 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
-        <WhatsAppButton variant="float" />
       </body>
     </html>
   );
