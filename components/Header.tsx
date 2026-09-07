@@ -5,8 +5,9 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { CalendarCheck, Menu, MessageCircle, Phone, X } from "lucide-react";
+import { CalendarCheck, Menu, Phone, X } from "lucide-react";
 import Logo from "@/components/Logo";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { NAV_LINKS, SITE, telHref, whatsappHref } from "@/lib/site";
 
 export default function Header() {
@@ -145,7 +146,7 @@ export default function Header() {
                   onClick={close}
                   className="btn-secondary w-full"
                 >
-                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  <WhatsAppIcon className="h-4 w-4" />
                   WhatsApp
                 </a>
                 <a href={telHref()} className="btn-secondary w-full">
@@ -210,7 +211,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="inline-flex min-h-[42px] items-center gap-2 rounded-xl border border-wbDark-200 bg-white px-4 text-sm font-semibold text-wbDark-700 transition-colors hover:border-[#25D366] hover:text-[#128C7E]"
             >
-              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              <WhatsAppIcon className="h-4 w-4" />
               WhatsApp
             </a>
             <Link

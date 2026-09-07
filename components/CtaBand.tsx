@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, CalendarCheck, MessageCircle } from "lucide-react";
+import { ArrowRight, CalendarCheck } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { whatsappHref } from "@/lib/site";
 
 type CtaBandProps = {
@@ -50,7 +51,7 @@ export default function CtaBand({
                   rel="noopener noreferrer"
                   className="btn-outline-dark w-full sm:w-auto"
                 >
-                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  <WhatsAppIcon className="h-4 w-4" />
                   App via WhatsApp
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>

@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Clock, Mail, MapPin, MessageCircle, MessageSquareText, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageSquareText, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { mapsHref, SITE, telHref, whatsappHref } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ const CONTACT_CARDS = [
     linkLabel: SITE.phoneDisplay,
   },
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     title: "WhatsApp",
     lines: [SITE.phoneDisplay, "snel antwoord via de app"],
     href: whatsappHref(`Hallo ${SITE.name}, ik heb een vraag.`),
