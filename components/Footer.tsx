@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Phone, ShieldCheck } from "lucide-react";
 import Logo from "@/components/Logo";
 import { SERVICES } from "@/lib/content";
-import { NAV_LINKS, SITE } from "@/lib/site";
+import { NAV_LINKS, SITE, telHref, whatsappHref } from "@/lib/site";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -99,13 +99,26 @@ export default function Footer() {
             <ul className="mt-5 space-y-4 text-sm">
               <li>
                 <a
-                  href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                  href={telHref()}
                   className="flex min-h-[44px] items-center gap-3 text-gray-400 transition-colors hover:text-wbTeal-300"
                 >
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-wbDark-800">
                     <Phone className="h-4 w-4" aria-hidden="true" />
                   </span>
                   {SITE.phoneDisplay}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={whatsappHref(`Hallo ${SITE.name}, ik heb een vraag.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-[44px] items-center gap-3 text-gray-400 transition-colors hover:text-wbTeal-300"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-wbDark-800">
+                    <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  </span>
+                  WhatsApp
                 </a>
               </li>
               <li>

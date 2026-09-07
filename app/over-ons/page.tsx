@@ -183,7 +183,7 @@ export default function OverOnsPage() {
                     WB
                   </span>
                   <div>
-                    <p className="font-bold">W. Bakker</p>
+                    <p className="font-bold">{SITE.owner}</p>
                     <p className="text-sm text-white/80">
                       Oprichter &amp; Directeur, {SITE.name}
                     </p>

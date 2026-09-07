@@ -3,6 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -37,9 +38,11 @@ export const metadata: Metadata = {
     "financieel advies",
     "startersbegeleiding",
     "zzp boekhouding",
-    "accountant Amsterdam",
+    "accountant Middelburg",
+    "boekhouder Zeeland",
+    "boekhouder Middelburg",
   ],
-  authors: [{ name: SITE.name }],
+  authors: [{ name: SITE.owner }],
   creator: "webnestiQ",
   openGraph: {
     type: "website",
@@ -141,6 +144,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsAppButton variant="float" />
       </body>
     </html>
   );

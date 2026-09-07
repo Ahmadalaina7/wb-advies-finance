@@ -5,9 +5,9 @@ import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { CalendarCheck, Menu, Phone, X } from "lucide-react";
+import { CalendarCheck, Menu, MessageCircle, Phone, X } from "lucide-react";
 import Logo from "@/components/Logo";
-import { NAV_LINKS, SITE } from "@/lib/site";
+import { NAV_LINKS, SITE, telHref, whatsappHref } from "@/lib/site";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -139,9 +139,16 @@ export default function Header() {
                   Gratis kennismaking
                 </Link>
                 <a
-                  href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                  href={whatsappHref(`Hallo ${SITE.name}, ik heb een vraag.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={close}
                   className="btn-secondary w-full"
                 >
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  WhatsApp
+                </a>
+                <a href={telHref()} className="btn-secondary w-full">
                   <Phone className="h-4 w-4" aria-hidden="true" />
                   {SITE.phoneDisplay}
                 </a>
@@ -191,11 +198,20 @@ export default function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+              href={telHref()}
               className="inline-flex min-h-[44px] items-center gap-2 text-[15px] font-semibold text-wbDark-600 transition-colors hover:text-wbDark-900"
             >
               <Phone className="h-4 w-4" aria-hidden="true" />
               {SITE.phoneDisplay}
+            </a>
+            <a
+              href={whatsappHref(`Hallo ${SITE.name}, ik heb een vraag.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-[42px] items-center gap-2 rounded-xl border border-wbDark-200 bg-white px-4 text-sm font-semibold text-wbDark-700 transition-colors hover:border-[#25D366] hover:text-[#128C7E]"
+            >
+              <MessageCircle className="h-4 w-4" aria-hidden="true" />
+              WhatsApp
             </a>
             <Link
               href="/contact"

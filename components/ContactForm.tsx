@@ -131,7 +131,7 @@ export default function ContactForm({ defaultSubject }: ContactFormProps) {
             id="phone"
             type="tel"
             autoComplete="tel"
-            placeholder="06 - 12 34 56 78 (optioneel)"
+            placeholder="06 209 842 55 (optioneel)"
             aria-invalid={!!errors.phone}
             aria-describedby={errors.phone ? "phone-error" : undefined}
             className={`input-field ${errors.phone ? "input-error" : ""}`}

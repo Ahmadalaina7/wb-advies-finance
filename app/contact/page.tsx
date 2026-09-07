@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Clock, Mail, MapPin, MessageSquareText, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, MessageCircle, MessageSquareText, Phone } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Reveal from "@/components/Reveal";
-import { SITE } from "@/lib/site";
+import { mapsHref, SITE, telHref, whatsappHref } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact — Plan een Gratis Kennismaking",
   description:
-    "Neem contact op met WB Advies & Finance voor een gratis kennismaking. Bel, mail of stuur een bericht — u ontvangt binnen één werkdag antwoord van een vaste specialist.",
+    "Neem contact op met WB Advies & Finance in Middelburg. Bel, mail of app via WhatsApp — u ontvangt binnen één werkdag antwoord van Walid Bobouh.",
   alternates: { canonical: "/contact" },
 };
 
@@ -15,9 +15,16 @@ const CONTACT_CARDS = [
   {
     icon: Phone,
     title: "Bel ons",
-    lines: [SITE.phoneDisplay, "ma t/m vr, 09:00 – 17:30"],
-    href: `tel:${SITE.phone.replace(/\s/g, "")}`,
+    lines: [SITE.phoneDisplayIntl, "ma t/m vr, 09:00 – 17:30"],
+    href: telHref(),
     linkLabel: SITE.phoneDisplay,
+  },
+  {
+    icon: MessageCircle,
+    title: "WhatsApp",
+    lines: [SITE.phoneDisplay, "snel antwoord via de app"],
+    href: whatsappHref(`Hallo ${SITE.name}, ik heb een vraag.`),
+    linkLabel: "Open WhatsApp",
   },
   {
     icon: Mail,
@@ -30,9 +37,7 @@ const CONTACT_CARDS = [
     icon: MapPin,
     title: "Bezoek ons",
     lines: [SITE.address.street, `${SITE.address.postalCode} ${SITE.address.city}`],
-    href: `https://maps.google.com/?q=${encodeURIComponent(
-      `${SITE.address.street}, ${SITE.address.city}`
-    )}`,
+    href: mapsHref(),
     linkLabel: "Route plannen",
   },
 ];
@@ -151,8 +156,9 @@ export default function ContactPage() {
                       aria-hidden="true"
                     />
                     <p className="text-sm leading-relaxed text-gray-300">
-                      Liever direct antwoord? Tijdens openingstijden neemt u
-                      binnen drie minuten iemand op — geen keuzemenu.
+                      Liever direct antwoord? Bel of app via WhatsApp tijdens
+                      openingstijden — u krijgt persoonlijk contact, geen
+                      keuzemenu.
                     </p>
                   </div>
                 </div>

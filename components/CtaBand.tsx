@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, CalendarCheck } from "lucide-react";
+import { ArrowRight, CalendarCheck, MessageCircle } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import { whatsappHref } from "@/lib/site";
 
 type CtaBandProps = {
   title?: string;
@@ -16,7 +17,6 @@ export default function CtaBand({
       <div className="container-wb">
         <Reveal>
           <div className="relative overflow-hidden rounded-3xl bg-wbDark-900 px-6 py-14 text-center sm:px-12 sm:py-16">
-            {/* Teal glow accents */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute -top-32 left-1/2 h-64 w-[36rem] -translate-x-1/2 rounded-full opacity-70 blur-3xl"
@@ -43,10 +43,15 @@ export default function CtaBand({
                   Plan gratis kennismaking
                 </Link>
                 <a
-                  href="tel:+31612345678"
+                  href={whatsappHref(
+                    "Hallo, ik wil graag een gratis kennismaking plannen."
+                  )}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="btn-outline-dark w-full sm:w-auto"
                 >
-                  Bel direct
+                  <MessageCircle className="h-4 w-4" aria-hidden="true" />
+                  App via WhatsApp
                   <ArrowRight className="h-4 w-4" aria-hidden="true" />
                 </a>
               </div>
