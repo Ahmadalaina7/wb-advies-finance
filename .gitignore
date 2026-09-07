@@ -16,6 +16,8 @@
 # misc
 .DS_Store
 *.pem
+.server.log
+.freebuff/
 
 # debug
 npm-debug.log*
@@ -23,6 +25,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env*.local
 
 # typescript
