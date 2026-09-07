@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Als er naar de hoofdmap wordt verwezen, stuur door naar out/
+    RewriteRule ^$ out/ [L]
+    
+    # Als het bestand of de map niet direct bestaat in de root, zoek in out/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ out/$1 [L]
+</IfModule>
