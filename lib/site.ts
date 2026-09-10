@@ -3,7 +3,7 @@ export const SITE = {
   legalName: "WB Advies & Finance",
   owner: "Walid Bobouh",
   url: "https://wbadvies-finance.webnestiq.nl",
-  email: "info@wbadviesfinance.nl",
+  email: "contact@wbadviesfinance.nl",
   /** E.164 without spaces, for tel: and wa.me links */
   phone: "+31620984255",
   phoneDisplay: "06 209 842 55",

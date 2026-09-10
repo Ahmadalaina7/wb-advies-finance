@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { CheckCircle2, Loader2, Send } from "lucide-react";
 import { contactSchema, type ContactFormValues } from "@/lib/validation";
+import { SITE } from "@/lib/site";
 
 type ContactFormProps = {
   defaultSubject?: string;
@@ -13,6 +14,7 @@ type ContactFormProps = {
 
 export default function ContactForm({ defaultSubject }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -34,11 +36,41 @@ export default function ContactForm({ defaultSubject }: ContactFormProps) {
   const messageLength = watch("message")?.length ?? 0;
 
   const onSubmit = async (values: ContactFormValues) => {
-    // Simuleer een API-call; vervang dit door uw eigen endpoint of e-maildienst.
-    await new Promise((resolve) => setTimeout(resolve, 900));
-    console.log("Contactformulier verzonden:", values);
-    setSubmitted(true);
-    reset();
+    setSubmitError(null);
+
+    try {
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${SITE.email}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: values.name,
+            email: values.email,
+            phone: values.phone || "Niet opgegeven",
+            subject: values.subject || "Contactformulier",
+            message: values.message,
+            _replyto: values.email,
+            _subject: `Nieuw contactbericht: ${values.subject || "Algemeen"}`,
+            _template: "table",
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Versturen mislukt");
+      }
+
+      setSubmitted(true);
+      reset();
+    } catch {
+      setSubmitError(
+        "Het bericht kon niet worden verstuurd. Probeer het opnieuw of mail ons direct."
+      );
+    }
   };
 
   if (submitted) {
@@ -211,6 +243,18 @@ export default function ContactForm({ defaultSubject }: ContactFormProps) {
           </p>
         ) : null}
       </div>
+
+      {submitError ? (
+        <p role="alert" className="mt-5 text-sm font-medium text-red-500">
+          {submitError}{" "}
+          <a
+            href={`mailto:${SITE.email}`}
+            className="underline underline-offset-2 hover:text-red-600"
+          >
+            {SITE.email}
+          </a>
+        </p>
+      ) : null}
 
       <button
         type="submit"
