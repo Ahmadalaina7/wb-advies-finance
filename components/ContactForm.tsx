@@ -15,6 +15,7 @@ type ContactFormProps = {
 export default function ContactForm({ defaultSubject }: ContactFormProps) {
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState("");
 
   const {
     register,
@@ -39,28 +40,28 @@ export default function ContactForm({ defaultSubject }: ContactFormProps) {
     setSubmitError(null);
 
     try {
-      const response = await fetch(
-        `https://formsubmit.co/ajax/${SITE.email}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify({
-            name: values.name,
-            email: values.email,
-            phone: values.phone || "Niet opgegeven",
-            subject: values.subject || "Contactformulier",
-            message: values.message,
-            _replyto: values.email,
-            _subject: `Nieuw contactbericht: ${values.subject || "Algemeen"}`,
-            _template: "table",
-          }),
-        }
-      );
+      const response = await fetch("/contact.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: values.name,
+          email: values.email,
+          phone: values.phone || "",
+          subject: values.subject || "",
+          message: values.message,
+          privacy: values.privacy,
+          website: honeypot,
+        }),
+      });
 
-      if (!response.ok) {
+      const result = (await response.json().catch(() => null)) as {
+        ok?: boolean;
+      } | null;
+
+      if (!response.ok || !result?.ok) {
         throw new Error("Versturen mislukt");
       }
 
@@ -109,6 +110,18 @@ export default function ContactForm({ defaultSubject }: ContactFormProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="card p-6 sm:p-8">
+      <div className="absolute -left-[9999px] h-0 w-0 overflow-hidden opacity-0" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          type="text"
+          name="website"
+          tabIndex={-1}
+          autoComplete="off"
+          value={honeypot}
+          onChange={(event) => setHoneypot(event.target.value)}
+        />
+      </div>
       <div className="grid gap-5 sm:grid-cols-2">
         {/* Naam */}
         <div>
